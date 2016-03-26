@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         isInputAbletoNewExpression = true;
 
         expressionString="0";
-        text_Result.setText("0");
+        text_Result.setText("");
         text_smallResult.setText("0");
     }
     //gan View vao cac doi tuong
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         for(Button num : numpad)
             if(num.getId()==v.getId()) {
-                if (!isInputAbletoNewExpression) {
+                if (!isInputAbletoNewExpression||expressionString.equals("0")) {
                     expressionString = "";
                 }
                 expressionString += num.getText();
@@ -168,6 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.button_action_C:
                 expressionString="";
+                text_Result.setText("");
                 break;
             case R.id.button_action_CE:
                 int dem=1;
