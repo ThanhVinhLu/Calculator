@@ -18,7 +18,7 @@ import com.example.applycation.calculator.calculatorhandler.Check;
 import com.fathzer.soft.javaluator.examples.ExtendedDoubleEvaluator;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class BasicCalculator extends AppCompatActivity implements View.OnClickListener {
 
 
     String expressionString;
