@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.applycation.calculator.R;
+import com.example.applycation.calculator.calculatorhandler.Check;
+import com.fathzer.soft.javaluator.examples.ExtendedDoubleEvaluator;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView text_Result,text_smallResult;
 
-    Button numpad[],numpadDot;
+    Button numpad[];
 
     Button math_Plus,math_Minus,math_Multi,math_Divide,math_Mod,math_DaoDau;
 
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         attachOnClickListener();
 
         isInputPhrase_Math=true;
+        isInputAbletoNewExpression = true;
 
         expressionString="0";
         text_Result.setText("0");
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         text_smallResult = (TextView)findViewById(R.id.text_SmallResult);
 
         //numpad
-        numpad = new Button[10];
+        numpad = new Button[11];
         numpad[0] = (Button)findViewById(R.id.button_numpad_0);
         numpad[1] = (Button)findViewById(R.id.button_numpad_1);
         numpad[2] = (Button)findViewById(R.id.button_numpad_2);
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         numpad[7] = (Button)findViewById(R.id.button_numpad_7);
         numpad[8] = (Button)findViewById(R.id.button_numpad_8);
         numpad[9] = (Button)findViewById(R.id.button_numpad_9);
-        numpadDot = (Button)findViewById(R.id.button_numpad_dot);
+        numpad[10] = (Button)findViewById(R.id.button_numpad_dot);
 
         //math
         math_Plus = (Button)findViewById(R.id.button_Math_plus);
@@ -76,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         math_Multi = (Button)findViewById(R.id.button_Math_multiply);
         math_Divide = (Button)findViewById(R.id.button_Math_divide);
         math_Mod = (Button)findViewById(R.id.button_Math_mod);
-        math_sqrt = (Button)findViewById(R.id.button_Math_sqrt);
-        math_mu2 = (Button)findViewById(R.id.button_Math_xmu2);
+        math_sqrt = (Button)findViewById(R.id.button_Math_SQRT);
+        math_mu2 = (Button)findViewById(R.id.button_Math_pow2);
         math_1chiaX = (Button)findViewById(R.id.button_Math_1phanX);
         math_DaoDau = (Button)findViewById(R.id.button_Math_DaoDau);
 
@@ -97,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for(int i=0;i<numpad.length;i++){
             numpad[i].setOnClickListener(this);
         }
-        numpadDot.setOnClickListener(this);
 
         //math
         math_Plus.setOnClickListener(this);
@@ -118,12 +120,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
-    //Them noi dung vao TextView
-    public void addText(TextView textView,String content){
-        String oldText = textView.getText().toString();
-        textView.setText(oldText + content);
+    public String toViewString(String str){
+        return str.replace("sqrt","√").replace("*", "×").replace("/","÷");
     }
-
     public void starColorAnimaton(View v,int color){
         int colorStar = Color.WHITE;
         int colorEnd = color;
@@ -136,11 +135,91 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
         valueAnimator.start();
     }
+
+    private boolean isInputAbletoNewExpression;
     //cai dat Listener
     @Override
     public void onClick(View v) {
 
         starColorAnimaton(v, 0xFF55AAFF);
+
+        if(v.getId()==action_Equal.getId()){
+            try {
+                ExtendedDoubleEvaluator evaluator = new ExtendedDoubleEvaluator();
+                double result = evaluator.evaluate(expressionString);
+                String result_str = result + "";
+                expressionString = result_str;
+                text_Result.setText(result_str + "");
+                isInputAbletoNewExpression = false;
+            }catch (Exception ex){
+                expressionString="";
+                text_Result.setText("LỖI");
+            }
+            return;
+        }
+        for(Button num : numpad)
+            if(num.getId()==v.getId()) {
+                if (!isInputAbletoNewExpression) {
+                    expressionString = "";
+                }
+                expressionString += num.getText();
+            }
+
+        switch (v.getId()){
+            case R.id.button_action_C:
+                expressionString="";
+                break;
+            case R.id.button_action_CE:
+                int dem=1;
+                for(int i=0;i<expressionString.length();i++){
+                    if(Check.isNumber(expressionString.substring(expressionString.length()-dem)))
+                        dem++;
+                    else break;
+                }
+                expressionString=expressionString.substring(0,expressionString.length()+1-dem);
+                break;
+            case R.id.button_action_back:
+                char charLast = expressionString.charAt(expressionString.length()-1);
+                if(charLast=='(')
+                    expressionString=expressionString.substring(0,expressionString.lastIndexOf("sqrt"));
+                else
+                    expressionString=expressionString.substring(0,expressionString.length()-1);
+                break;
+            case R.id.button_Math_plus:
+                expressionString+="+";
+                break;
+            case R.id.button_Math_minus:
+                expressionString+="-";
+                break;
+            case R.id.button_Math_multiply:
+                expressionString+="*";
+                break;
+            case R.id.button_Math_divide:
+                expressionString+="/";
+                break;
+            case R.id.button_Math_mod:
+                expressionString+="%";
+                break;
+            case R.id.button_Math_pow2:
+                expressionString+="^2";
+                break;
+            case R.id.button_Math_1phanX:
+                expressionString+="1/";
+                break;
+            case R.id.button_Math_SQRT:
+                expressionString+="sqrt(";
+                break;
+            case R.id.button_Math_DaoDau:
+                expressionString+="-";
+                break;
+        }
+        if(expressionString.equals(""))expressionString="0";
+        isInputAbletoNewExpression=true;
+        String lastChar = expressionString.charAt(expressionString.length()-1)+"";
+        if(Check.isOperator(lastChar)&&!Check.isBrace(expressionString)){
+            expressionString = expressionString.substring(0,expressionString.length()-1)+")"+lastChar;
+        }
+        text_smallResult.setText(toViewString(expressionString));
 
     }
 

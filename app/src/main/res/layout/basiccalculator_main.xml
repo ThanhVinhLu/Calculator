@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/button_math_SQRT"
-                android:id="@+id/button_Math_sqrt"
+                android:id="@+id/button_Math_SQRT"
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
                 android:textSize="@dimen/buttondimen" />
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_math_pow2"
                 android:textAllCaps="false"
-                android:id="@+id/button_Math_xmu2"
+                android:id="@+id/button_Math_pow2"
                 android:background="@drawable/boder"
                 android:textSize="@dimen/buttondimen" />
             <Button
