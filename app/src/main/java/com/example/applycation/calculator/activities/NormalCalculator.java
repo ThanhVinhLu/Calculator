@@ -4,20 +4,15 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.applycation.calculator.R;
 import com.example.applycation.calculator.calculatorhandler.Check;
 import com.example.applycation.calculator.calculatorhandler.Expression;
-
-import org.w3c.dom.Text;
 
 import java.math.BigDecimal;
 

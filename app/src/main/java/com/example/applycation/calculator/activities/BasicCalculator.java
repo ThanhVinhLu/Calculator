@@ -36,8 +36,6 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
     private boolean isInputAbletoNewExpression;
 
 
-    //FLAG
-    private boolean isInputPhrase_Math;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +45,6 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
         attachIdToView();
         attachOnClickListener();
 
-        isInputPhrase_Math=true;
         isInputAbletoNewExpression = true;
 
         expressionString="0";
