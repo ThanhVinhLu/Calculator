@@ -8,8 +8,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -32,6 +30,8 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
     Button action_Equal,action_CE,action_C, action_Back;
 
     Button math_sqrt,math_mu2,math_1chiaX;
+
+    private boolean isInputAbletoNewExpression;
 
 
     //FLAG
@@ -120,9 +120,6 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
 
 
     }
-    public String toViewString(String str){
-        return str.replace("sqrt","√").replace("*", "×").replace("/","÷");
-    }
     public void starColorAnimaton(View v,int color){
         int colorStar = Color.WHITE;
         int colorEnd = color;
@@ -135,8 +132,6 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
         valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
         valueAnimator.start();
     }
-
-    private boolean isInputAbletoNewExpression;
     //cai dat Listener
     @Override
     public void onClick(View v) {
@@ -157,14 +152,14 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
             }
             return;
         }
-        for(Button num : numpad)
-            if(num.getId()==v.getId()) {
-                if (!isInputAbletoNewExpression||expressionString.equals("0")) {
+        for(Button num : numpad) {
+            if (num.getId() == v.getId()) {
+                if (!isInputAbletoNewExpression || expressionString.equals("0")) {
                     expressionString = "";
                 }
                 expressionString += num.getText();
             }
-
+        }
         switch (v.getId()){
             case R.id.button_action_C:
                 expressionString="";
@@ -220,12 +215,12 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
         if(Check.isOperator(lastChar)&&!Check.isBrace(expressionString)){
             expressionString = expressionString.substring(0,expressionString.length()-1)+")"+lastChar;
         }
-        text_smallResult.setText(toViewString(expressionString));
+        text_smallResult.setText(Check.toViewString(expressionString));
 
     }
 
 
-    @Override
+/*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -238,5 +233,5 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
         if (id == R.id.action_settings)
             return true;
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }

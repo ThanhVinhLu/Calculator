@@ -58,7 +58,7 @@
                 android:text="@string/button_math_sin"
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
-                android:id="@+id/button_Math_sin"
+                android:id="@+id/button_numpad_sin"
                 android:textSize="20sp"/>
             <Button
                 android:layout_weight="1"
@@ -67,7 +67,7 @@
                 android:text="@string/button_math_cos"
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
-                android:id="@+id/button_Math_cos"
+                android:id="@+id/button_numpad_cos"
                 android:textSize="20sp" />
             <Button
                 android:layout_weight="1"
@@ -76,7 +76,7 @@
                 android:text="@string/button_math_tan"
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
-                android:id="@+id/button_Math_tan"
+                android:id="@+id/button_numpad_tan"
                 android:textSize="20sp" />
 
             <Button
@@ -86,7 +86,7 @@
                 android:text="@string/button_math_cot"
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
-                android:id="@+id/button_Math_cot"
+                android:id="@+id/button_numpad_cot"
                 android:textSize="20sp" />
             <Button
                 android:layout_weight="1"
@@ -123,7 +123,7 @@
                 android:text="@string/button_math_mod"
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
-                android:id="@+id/button_Math_mod"
+                android:id="@+id/button_Math_phanTram"
                 android:textSize="20sp" />
 
             <Button
@@ -148,9 +148,9 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_acttion_StoD"
+                android:text="@string/button_Math_mu"
                 android:background="@drawable/boder"
-                android:id="@+id/button_action_SD"
+                android:id="@+id/button_Math_mu"
                 android:textSize="20sp"/>
             <Button
                 android:layout_weight="1"
@@ -239,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_math_SQRT"
                 android:background="@drawable/boder"
-                android:id="@+id/button_Math_SQRT"
+                android:id="@+id/button_Math_can"
                 android:textSize="20sp"/>
             <Button
                 android:layout_weight="1"
@@ -333,7 +333,7 @@
                 android:text="@string/button_math_pow2"
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
-                android:id="@+id/button_Math_pow2"
+                android:id="@+id/button_Math_mu2"
                 android:textSize="20sp"/>
             <Button
                 android:layout_weight="1"
@@ -361,7 +361,7 @@
                 android:text="@string/button_action_ans"
                 android:background="@drawable/boder"
                 android:textStyle="bold"
-                android:id="@+id/button_action_ans"
+                android:id="@+id/button_numpad_ans"
                 android:textSize="20sp" />
             <Button
                 android:layout_weight="1"

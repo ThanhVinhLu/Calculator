@@ -50,4 +50,5 @@
     <string name="button_math_phanso">ª/b</string>
     <string name="button_math_log">log</string>
     <string name="button_math_ln">ln</string>
+    <string name="button_Math_mu">^</string>
 </resources>
