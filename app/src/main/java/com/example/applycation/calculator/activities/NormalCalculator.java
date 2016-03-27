@@ -15,18 +15,21 @@ import android.widget.Toast;
 
 import com.example.applycation.calculator.R;
 import com.example.applycation.calculator.calculatorhandler.Check;
-import com.fathzer.soft.javaluator.examples.ExtendedDoubleEvaluator;
+import com.example.applycation.calculator.calculatorhandler.Expression;
 
 import org.w3c.dom.Text;
+
+import java.math.BigDecimal;
 
 public class NormalCalculator extends AppCompatActivity implements View.OnClickListener {
 
     String expressionString;
+    BigDecimal ans;
 
     TextView text_Result,text_smallResult;
 
     Button numpad[];
-    Button numpad_ANS,numpad_sin,numpad_cos,numpad_tan,numpad_cot;
+    Button numpad_ANS;
 
     Button math_Plus,math_Minus,math_Multi,math_Divide;
 
@@ -45,6 +48,7 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
 
 
         isInputAbletoNewExpression = true;
+        ans=new BigDecimal(0);
         expressionString="0";
         text_Result.setText("0");
         text_smallResult.setText(expressionString);
@@ -55,11 +59,11 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
         text_Result = (TextView)findViewById(R.id.text_Result);
         text_smallResult = (TextView)findViewById(R.id.text_SmallResult);
 
-        numpad_ANS = (Button) findViewById(R.id.button_numpad_ans);
+        //numpad_ANS = (Button) findViewById(R.id.button_numpad_ans);
 
         //numpad
 
-        numpad = new Button[17];
+        numpad = new Button[18];
         numpad[0] = (Button) findViewById(R.id.button_numpad_0);
         numpad[1] = (Button) findViewById(R.id.button_numpad_1);
         numpad[2] = (Button) findViewById(R.id.button_numpad_2);
@@ -80,6 +84,8 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
         numpad[14] = (Button) findViewById(R.id.button_numpad_cos);
         numpad[15] = (Button) findViewById(R.id.button_numpad_tan);
         numpad[16] = (Button) findViewById(R.id.button_numpad_cot);
+
+        numpad[17] = (Button) findViewById(R.id.button_numpad_ans);
 
 
         //math
@@ -112,7 +118,7 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
         numpad_cos.setOnClickListener(this);
         numpad_tan.setOnClickListener(this);
         numpad_cot.setOnClickListener(this);*/
-        numpad_ANS.setOnClickListener(this);
+        //numpad_ANS.setOnClickListener(this);
 
         math_Plus.setOnClickListener(this);
         math_Minus.setOnClickListener(this);
@@ -155,11 +161,11 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
 
         if(v.getId()==action_Equal.getId()){
             try {
-                ExtendedDoubleEvaluator evaluator = new ExtendedDoubleEvaluator();
-                double result = evaluator.evaluate(expressionString);
-                String result_str = result + "";
-                expressionString = result_str;
-                text_Result.setText(result_str + "");
+                expressionString=expressionString.replace("Ans",ans.doubleValue()+"");
+                ans = new Expression(expressionString).eval();
+                //ans = result;
+                expressionString=ans+"";
+                text_Result.setText(Check.scaleValue(ans,6));
                 isInputAbletoNewExpression = false;
             }catch (Exception ex){
                 expressionString="";
@@ -177,6 +183,7 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
                     expressionString+="(";
             }
         }
+
         expressionString=expressionString.replace("cot","1/tan");
 
         switch (v.getId()) {
@@ -194,14 +201,16 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
                 expressionString = expressionString.substring(0, expressionString.length() + 1 - dem);
                 break;
             case R.id.button_action_back:
-                if (expressionString.substring(expressionString.length() - 5).contains("sqrt"))
+                if (expressionString.length()>=5&&expressionString.substring(expressionString.length() - 5).contains("sqrt"))
                     expressionString = expressionString.substring(0, expressionString.lastIndexOf("sqrt"));
-                else if (expressionString.substring(expressionString.length() - 4).contains("sin"))
+                else if (expressionString.length()>=4&&expressionString.substring(expressionString.length() - 4).contains("sin"))
                     expressionString = expressionString.substring(0, expressionString.lastIndexOf("sin"));
-                else if (expressionString.substring(expressionString.length() - 4).contains("cos"))
+                else if (expressionString.length()>=4&&expressionString.substring(expressionString.length() - 4).contains("cos"))
                     expressionString = expressionString.substring(0, expressionString.lastIndexOf("cos"));
-                else if (expressionString.substring(expressionString.length() - 4).contains("tan"))
+                else if (expressionString.length()>=4&&expressionString.substring(expressionString.length() - 4).contains("tan"))
                     expressionString = expressionString.substring(0, expressionString.lastIndexOf("tan"));
+                else if (expressionString.length()>=4&&expressionString.substring(expressionString.length() - 4).contains("cot"))
+                    expressionString = expressionString.substring(0, expressionString.lastIndexOf("cot"));
                 else
                     expressionString = expressionString.substring(0, expressionString.length() - 1);
                 break;

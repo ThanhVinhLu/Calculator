@@ -1,7 +1,7 @@
 package com.example.applycation.calculator.calculatorhandler;
 
-import com.fathzer.soft.javaluator.examples.ExtendedDoubleEvaluator;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -17,12 +17,21 @@ public class Check {
     }
     public static boolean isNumber(String str){
         try{
-            ExtendedDoubleEvaluator evaluator = new ExtendedDoubleEvaluator();
-            evaluator.evaluate(str);
+            BigDecimal a = new Expression(str).eval();
             return true;
         }catch(Exception ex){
             return false;
         }
+    }
+    public static String scaleValue(BigDecimal num,int round){
+        String doublevalue = num.doubleValue()+"";
+        if(doublevalue.length()-doublevalue.indexOf('.')>round)
+            num=num.setScale(round, BigDecimal.ROUND_HALF_UP);
+        else
+            num=num.setScale(doublevalue.length()-doublevalue.indexOf('.')-1, BigDecimal.ROUND_HALF_UP);
+        if(num.doubleValue()-num.intValue()==0)
+            return num.intValue()+"";
+        return num.toString();
     }
     //Kiem tra toan hang
     public static boolean isOperand(String str){
@@ -67,7 +76,7 @@ public class Check {
     }
     //Kiem tra dau ngoac cua bieu thuc co dung hay khong
     public static boolean isBrace(String s){
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
         for(int i=0;i<s.length();i++)
             if(isBracket(s.charAt(i)+""))
                 if(isOpen(s.charAt(i)+""))
@@ -83,7 +92,7 @@ public class Check {
     }
     public static String reverse(String a){
         String s="";
-        Stack<String> stack = new Stack<String>();
+        Stack<String> stack = new Stack<>();
         scan = new Scanner(a);
         while(scan.hasNext())
             stack.push(scan.next());

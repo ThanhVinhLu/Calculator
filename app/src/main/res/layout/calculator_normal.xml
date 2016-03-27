@@ -363,6 +363,7 @@
                 android:text="@string/button_action_ans"
                 android:background="@drawable/boder"
                 android:textStyle="bold"
+                android:textAllCaps="false"
                 android:id="@+id/button_numpad_ans"
                 android:textSize="@dimen/normalbuttontextsize" />
             <Button

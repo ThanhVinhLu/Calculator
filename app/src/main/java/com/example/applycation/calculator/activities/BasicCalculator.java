@@ -13,7 +13,9 @@ import android.widget.TextView;
 
 import com.example.applycation.calculator.R;
 import com.example.applycation.calculator.calculatorhandler.Check;
-import com.fathzer.soft.javaluator.examples.ExtendedDoubleEvaluator;
+import com.example.applycation.calculator.calculatorhandler.Expression;
+
+import java.math.BigDecimal;
 
 
 public class BasicCalculator extends AppCompatActivity implements View.OnClickListener {
@@ -140,11 +142,9 @@ public class BasicCalculator extends AppCompatActivity implements View.OnClickLi
 
         if(v.getId()==action_Equal.getId()){
             try {
-                ExtendedDoubleEvaluator evaluator = new ExtendedDoubleEvaluator();
-                double result = evaluator.evaluate(expressionString);
-                String result_str = result + "";
-                expressionString = result_str;
-                text_Result.setText(result_str + "");
+                BigDecimal result = new Expression(expressionString).eval();
+                expressionString=result+"";
+                text_Result.setText(Check.scaleValue(result,6));
                 isInputAbletoNewExpression = false;
             }catch (Exception ex){
                 expressionString="";
