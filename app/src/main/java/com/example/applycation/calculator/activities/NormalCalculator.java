@@ -4,8 +4,10 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -41,6 +43,7 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
         attachIdToView();
         attachOnClickListener();
 
+
         isInputAbletoNewExpression = true;
         expressionString="0";
         text_Result.setText("0");
@@ -52,15 +55,11 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
         text_Result = (TextView)findViewById(R.id.text_Result);
         text_smallResult = (TextView)findViewById(R.id.text_SmallResult);
 
+        numpad_ANS = (Button) findViewById(R.id.button_numpad_ans);
 
         //numpad
-        numpad_ANS = (Button) findViewById(R.id.button_numpad_ans);
-        numpad_sin = (Button) findViewById(R.id.button_numpad_sin);
-        numpad_cos = (Button) findViewById(R.id.button_numpad_cos);
-        numpad_tan = (Button) findViewById(R.id.button_numpad_tan);
-        numpad_cot = (Button) findViewById(R.id.button_numpad_cot);
 
-        numpad = new Button[13];
+        numpad = new Button[17];
         numpad[0] = (Button) findViewById(R.id.button_numpad_0);
         numpad[1] = (Button) findViewById(R.id.button_numpad_1);
         numpad[2] = (Button) findViewById(R.id.button_numpad_2);
@@ -72,8 +71,15 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
         numpad[8] = (Button) findViewById(R.id.button_numpad_8);
         numpad[9] = (Button) findViewById(R.id.button_numpad_9);
         numpad[10] = (Button) findViewById(R.id.button_numpad_dot);
+
         numpad[11] = (Button) findViewById(R.id.button_numpad_mongoac);
         numpad[12] = (Button) findViewById(R.id.button_numpad_dongngoac);
+
+
+        numpad[13] = (Button) findViewById(R.id.button_numpad_sin);
+        numpad[14] = (Button) findViewById(R.id.button_numpad_cos);
+        numpad[15] = (Button) findViewById(R.id.button_numpad_tan);
+        numpad[16] = (Button) findViewById(R.id.button_numpad_cot);
 
 
         //math
@@ -102,10 +108,10 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
     public void attachOnClickListener(){
         for(Button num:numpad)
             num.setOnClickListener(this);
-        numpad_sin.setOnClickListener(this);
+        /*numpad_sin.setOnClickListener(this);
         numpad_cos.setOnClickListener(this);
         numpad_tan.setOnClickListener(this);
-        numpad_cot.setOnClickListener(this);
+        numpad_cot.setOnClickListener(this);*/
         numpad_ANS.setOnClickListener(this);
 
         math_Plus.setOnClickListener(this);
@@ -161,14 +167,17 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
             }
             return;
         }
-        for(Button num : numpad) {
-            if (num.getId() == v.getId()) {
+        for(int i=0;i<numpad.length;i++) {
+            if (numpad[i].getId() == v.getId()) {
                 if (!isInputAbletoNewExpression || expressionString.equals("0")) {
                     expressionString = "";
                 }
-                expressionString += num.getText();
+                expressionString += numpad[i].getText();
+                if(i>=13&&i<=16)
+                    expressionString+="(";
             }
         }
+        expressionString=expressionString.replace("cot","1/tan");
 
         switch (v.getId()) {
             case R.id.button_action_C:
@@ -185,9 +194,14 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
                 expressionString = expressionString.substring(0, expressionString.length() + 1 - dem);
                 break;
             case R.id.button_action_back:
-                char charLast = expressionString.charAt(expressionString.length() - 1);
-                if (charLast == '(')
+                if (expressionString.substring(expressionString.length() - 5).contains("sqrt"))
                     expressionString = expressionString.substring(0, expressionString.lastIndexOf("sqrt"));
+                else if (expressionString.substring(expressionString.length() - 4).contains("sin"))
+                    expressionString = expressionString.substring(0, expressionString.lastIndexOf("sin"));
+                else if (expressionString.substring(expressionString.length() - 4).contains("cos"))
+                    expressionString = expressionString.substring(0, expressionString.lastIndexOf("cos"));
+                else if (expressionString.substring(expressionString.length() - 4).contains("tan"))
+                    expressionString = expressionString.substring(0, expressionString.lastIndexOf("tan"));
                 else
                     expressionString = expressionString.substring(0, expressionString.length() - 1);
                 break;
@@ -206,15 +220,30 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
             case R.id.button_Math_mu:
                 expressionString += "^";
                 break;
+            case R.id.button_Math_phanTram:
+                expressionString += "/100";
+                break;
+            case R.id.button_Math_divideX:
+                expressionString += "1/";
+                break;
+            case R.id.button_Math_phanso:
+                expressionString += "/";
+                break;
+            case R.id.button_Math_mu2:
+                expressionString += "^2";
+                break;
+            case R.id.button_Math_mu3:
+                expressionString += "^3";
+                break;
+            case R.id.button_Math_can:
+                expressionString += "sqrt(";
+                break;
 
         }
 
         if(expressionString.equals(""))expressionString="0";
         isInputAbletoNewExpression=true;
         String lastChar = expressionString.charAt(expressionString.length()-1)+"";
-        if(Check.isOperator(lastChar)&&!Check.isBrace(expressionString)){
-            expressionString = expressionString.substring(0,expressionString.length()-1)+")"+lastChar;
-        }
         text_smallResult.setText(Check.toViewString(expressionString));
     }
 }
