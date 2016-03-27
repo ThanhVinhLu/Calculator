@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="buttondimen">20sp</dimen>
+    <dimen name="basicbuttontextsize">20sp</dimen>
+    <dimen name="normalbuttontextsize">17sp</dimen>
+    <dimen name="normalbuttonheight">35dp</dimen>
 </resources>
