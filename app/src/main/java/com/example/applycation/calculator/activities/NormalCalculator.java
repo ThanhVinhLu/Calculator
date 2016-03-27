@@ -159,7 +159,7 @@ public class NormalCalculator extends AppCompatActivity implements View.OnClickL
                 expressionString=expressionString.replace("Ans",ans.doubleValue()+"");
                 ans = new Expression(expressionString).eval();
                 //ans = result;
-                expressionString=ans+"";
+                expressionString="Ans"+"";
                 text_Result.setText(Check.scaleValue(ans,6));
                 isInputAbletoNewExpression = false;
             }catch (Exception ex){
