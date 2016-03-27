@@ -21,6 +21,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/calculator_basic" />
+    <include layout="@layout/calculator_normal" />
 
 </android.support.design.widget.CoordinatorLayout>
