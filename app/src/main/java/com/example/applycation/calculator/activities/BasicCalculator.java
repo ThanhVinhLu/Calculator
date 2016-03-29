@@ -6,7 +6,9 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,7 +20,7 @@ import com.example.applycation.calculator.calculatorhandler.Expression;
 import java.math.BigDecimal;
 
 
-public class BasicCalculator extends AppCompatActivity implements View.OnClickListener {
+public class BasicCalculator extends BaseActivity implements View.OnClickListener {
 
 
     String expressionString;

@@ -16,7 +16,7 @@ import com.example.applycation.calculator.calculatorhandler.Expression;
 
 import java.math.BigDecimal;
 
-public class NormalCalculator extends AppCompatActivity implements View.OnClickListener {
+public class NormalCalculator extends BaseActivity implements View.OnClickListener {
 
     String expressionString;
     BigDecimal ans;

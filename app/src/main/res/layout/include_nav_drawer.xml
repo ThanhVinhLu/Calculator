@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="start"
+    android:background="#d9dee2"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relative_layout"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_toan"
+                android:text="Toán"
+                android:textSize="20sp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Máy tính cơ bản"
+                android:id="@+id/button_coBan"
+                android:layout_below="@+id/textView_toan"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Máy tính bình thường"
+                android:id="@+id/button_binhThuong"
+                android:layout_below="@+id/button_coBan"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Máy tính nâng cao"
+                android:id="@+id/button_nangCao"
+                android:layout_below="@+id/button_binhThuong"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buôn bán"
+                android:id="@+id/button_buonBan"
+                android:layout_below="@+id/button_nangCao"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_pt"
+                android:text="Phương trình"
+                android:textSize="20sp"
+                android:layout_below="@+id/button_buonBan"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phương trình một ẩn"
+                android:id="@+id/button_ptMotAn"
+                android:layout_below="@+id/textView_pt"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hệ phương trình"
+                android:id="@+id/button_hePt"
+                android:layout_below="@+id/button_ptMotAn"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_hinhHoc"
+                android:text="Hình học"
+                android:textSize="20sp"
+                android:layout_below="@+id/button_hePt"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hình khối"
+                android:id="@+id/button_hinhKhoi"
+                android:layout_below="@+id/textView_hinhHoc"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hình Phẳng"
+                android:id="@+id/button_hinhPhang"
+                android:layout_below="@+id/button_hinhKhoi"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_chuyenDoi"
+                android:text="Chuyển đổi"
+                android:textSize="20sp"
+                android:layout_below="@+id/button_hinhPhang"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chuyển đổi dơn vị"
+                android:id="@+id/button_chuyenDoiDonVi"
+                android:layout_below="@+id/textView_chuyenDoi"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chuyển đổi cơ số "
+                android:id="@+id/button_chuyenDoiCoSo"
+                android:layout_below="@+id/button_chuyenDoiDonVi"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_vector"
+                android:text="Vector"
+                android:textSize="20sp"
+                android:layout_below="@+id/button_chuyenDoiCoSo"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chuyển đổi vevtor"
+                android:id="@+id/button_tinhVector"
+                android:layout_below="@+id/textView_vector"
+                />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
