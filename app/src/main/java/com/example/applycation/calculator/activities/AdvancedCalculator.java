@@ -10,6 +10,6 @@ public class AdvancedCalculator extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calculator_advanced);
+        setContentView(R.layout.activity_calculator_advanced);
     }
 }

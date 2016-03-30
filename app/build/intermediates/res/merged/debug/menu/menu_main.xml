@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <group android:id="@+id/drawer_layout">
+        <item
+            android:id="@+id/action_setting"
+            android:title="Setting"
+            android:orderInCategory="100"
+            android:showAsAction="never"
+            tools:ignore="AppCompatResource" />
+        <item
+            android:id="@+id/action_help"
+            android:title="Help"
+            android:orderInCategory="100"
+            android:showAsAction="never"
+            tools:ignore="AppCompatResource" />
+        <item
+            android:id="@+id/action_feedBack"
+            android:title="Feed Back"
+            android:orderInCategory="100"
+            android:showAsAction="never"
+            tools:ignore="AppCompatResource" />
+        <item
+            android:id="@+id/action_aboutUs"
+            android:title="About us"
+            android:orderInCategory="100"
+            android:showAsAction="never"
+            tools:ignore="AppCompatResource"
+            />
+    </group>
+
+</menu>

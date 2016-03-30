@@ -51,4 +51,5 @@
     <string name="button_math_log">log</string>
     <string name="button_math_ln">ln</string>
     <string name="button_Math_mu">^</string>
+    <string name="title_activity_test">Test</string>
 </resources>
