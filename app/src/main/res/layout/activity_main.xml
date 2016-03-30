@@ -13,10 +13,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.BasicCalculator"
+        tools:context=".activities.ActivityBasCalculator"
         android:id="@+id/drawer_layout"
         >
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Press Menu for more information"
+            android:gravity="center"/>
         <include layout="@layout/include_nav_drawer"/>
 
     </android.support.v4.widget.DrawerLayout>

@@ -17,7 +17,7 @@ import com.example.applycation.calculator.calculatorhandler.Expression;
 import java.math.BigDecimal;
 
 
-public class BasicCalculator extends BaseActivity implements View.OnClickListener {
+public class ActivityBasCalculator extends MainMenuActivity implements View.OnClickListener {
 
 
     String expressionString;

@@ -10,7 +10,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,11 +19,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.applycation.calculator.R;
 
-
-/**
- * Created by PC on 3/27/2016.
- */
-public abstract class BaseActivity extends ActionBarActivity{
+public abstract class MainMenuActivity extends AppCompatActivity{
 
 
     private DrawerLayout drawerLayout;
@@ -48,7 +44,7 @@ public abstract class BaseActivity extends ActionBarActivity{
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(BaseActivity.this, BasicCalculator.class));
+                startActivity(new Intent(MainMenuActivity.this, ActivityBasCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
             }
@@ -57,7 +53,7 @@ public abstract class BaseActivity extends ActionBarActivity{
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(BaseActivity.this, NormalCalculator.class));
+                startActivity(new Intent(MainMenuActivity.this, ActivityNorCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
             }
@@ -66,7 +62,7 @@ public abstract class BaseActivity extends ActionBarActivity{
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(BaseActivity.this, AdvancedCalculator.class));
+                startActivity(new Intent(MainMenuActivity.this, ActivityAdvCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
             }
