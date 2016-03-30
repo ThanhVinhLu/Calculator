@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_math_sin"
                 android:textAllCaps="false"
-                android:background="@drawable/cell_shape"
+                android:background="@drawable/boder"
                 android:id="@+id/button_Math_sin"
                 android:textSize="20sp"/>
             <Button
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_math_cos"
                 android:textAllCaps="false"
-                android:background="@drawable/cell_shape"
+                android:background="@drawable/boder"
                 android:id="@+id/button_Math_cos"
                 android:textSize="20sp" />
             <Button
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_math_tan"
                 android:textAllCaps="false"
-                android:background="@drawable/cell_shape"
+                android:background="@drawable/boder"
                 android:id="@+id/button_Math_tan"
                 android:textSize="20sp" />
 
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_math_cot"
                 android:textAllCaps="false"
-                android:background="@drawable/cell_shape"
+                android:background="@drawable/boder"
                 android:id="@+id/button_Math_cot"
                 android:textSize="20sp" />
             <Button
@@ -101,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/button_action_shift"
-                android:background="@drawable/cell_shape"
+                android:background="@drawable/boder"
                 android:id="@+id/button_action_shift"
                 android:textSize="20sp" />
         </TableRow>
