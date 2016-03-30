@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="start"
-    android:background="#d9dee2"
+    android:background="#7b8bf7"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_toan"
                 android:text="Toán"
-                android:textSize="20sp"
+                android:textSize="@dimen/drawertextviewtextsize"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -27,6 +27,7 @@
                 android:text="Máy tính cơ bản"
                 android:id="@+id/button_coBan"
                 android:layout_below="@+id/textView_toan"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -34,6 +35,7 @@
                 android:text="Máy tính bình thường"
                 android:id="@+id/button_binhThuong"
                 android:layout_below="@+id/button_coBan"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -41,6 +43,7 @@
                 android:text="Máy tính nâng cao"
                 android:id="@+id/button_nangCao"
                 android:layout_below="@+id/button_binhThuong"
+                android:background="@drawable/drawerbuttonboder"
                 />
 
             <Button
@@ -49,6 +52,7 @@
                 android:text="Buôn bán"
                 android:id="@+id/button_buonBan"
                 android:layout_below="@+id/button_nangCao"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -64,6 +68,7 @@
                 android:text="Phương trình một ẩn"
                 android:id="@+id/button_ptMotAn"
                 android:layout_below="@+id/textView_pt"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -71,13 +76,14 @@
                 android:text="hệ phương trình"
                 android:id="@+id/button_hePt"
                 android:layout_below="@+id/button_ptMotAn"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_hinhHoc"
                 android:text="Hình học"
-                android:textSize="20sp"
+                android:textSize="@dimen/drawertextviewtextsize"
                 android:layout_below="@+id/button_hePt"
                 />
             <Button
@@ -86,6 +92,7 @@
                 android:text="Hình khối"
                 android:id="@+id/button_hinhKhoi"
                 android:layout_below="@+id/textView_hinhHoc"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -93,13 +100,14 @@
                 android:text="Hình Phẳng"
                 android:id="@+id/button_hinhPhang"
                 android:layout_below="@+id/button_hinhKhoi"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_chuyenDoi"
                 android:text="Chuyển đổi"
-                android:textSize="20sp"
+                android:textSize="@dimen/drawertextviewtextsize"
                 android:layout_below="@+id/button_hinhPhang"
                 />
             <Button
@@ -108,6 +116,7 @@
                 android:text="Chuyển đổi dơn vị"
                 android:id="@+id/button_chuyenDoiDonVi"
                 android:layout_below="@+id/textView_chuyenDoi"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -115,13 +124,14 @@
                 android:text="Chuyển đổi cơ số "
                 android:id="@+id/button_chuyenDoiCoSo"
                 android:layout_below="@+id/button_chuyenDoiDonVi"
+                android:background="@drawable/drawerbuttonboder"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_vector"
                 android:text="Vector"
-                android:textSize="20sp"
+                android:textSize="@dimen/drawertextviewtextsize"
                 android:layout_below="@+id/button_chuyenDoiCoSo"
                 />
             <Button
@@ -130,6 +140,7 @@
                 android:text="Chuyển đổi vevtor"
                 android:id="@+id/button_tinhVector"
                 android:layout_below="@+id/textView_vector"
+                android:background="@drawable/drawerbuttonboder"
                 />
         </RelativeLayout>
     </ScrollView>

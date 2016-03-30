@@ -3,7 +3,11 @@ package com.example.applycation.calculator.activities;
 /**
  * Created by PC on 3/28/2016.
  */
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -43,6 +47,7 @@ public abstract class BaseActivity extends ActionBarActivity{
         findViewById(R.id.button_coBan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(BaseActivity.this, MainActivity.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
@@ -88,7 +93,7 @@ public abstract class BaseActivity extends ActionBarActivity{
     }
 
     public boolean onPrepareOptionsMenu(Menu menu){
-        menu.setGroupVisible(R.id.drawer_layout,!drawerLayout.isDrawerOpen(Gravity.START));
+        menu.setGroupVisible(R.id.drawer_layout, !drawerLayout.isDrawerOpen(Gravity.START));
         return super.onPrepareOptionsMenu(menu);
     }
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -110,6 +115,18 @@ public abstract class BaseActivity extends ActionBarActivity{
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void starColorAnimaton(View v,int color){
+        int colorStar = Color.WHITE;
+        int colorEnd = color;
+        ValueAnimator valueAnimator = ObjectAnimator.ofInt(
+                v, "backgroundColor", colorStar, colorEnd
+        );
+        valueAnimator.setDuration(100);
+        valueAnimator.setEvaluator(new ArgbEvaluator());
+        valueAnimator.setRepeatCount(1);
+        valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
+        valueAnimator.start();
     }
 
 }
