@@ -42,7 +42,7 @@ public class BasicCalculator extends BaseActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.calculator_basic);
 
         attachIdToView();
         attachOnClickListener();

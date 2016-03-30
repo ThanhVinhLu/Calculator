@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="start"
-    android:background="#7b8bf7"
+    android:background="#212119"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -20,6 +20,8 @@
                 android:id="@+id/textView_toan"
                 android:text="Toán"
                 android:textSize="@dimen/drawertextviewtextsize"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="true"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -28,6 +30,9 @@
                 android:id="@+id/button_coBan"
                 android:layout_below="@+id/textView_toan"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -36,6 +41,9 @@
                 android:id="@+id/button_binhThuong"
                 android:layout_below="@+id/button_coBan"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -44,6 +52,9 @@
                 android:id="@+id/button_nangCao"
                 android:layout_below="@+id/button_binhThuong"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
 
             <Button
@@ -53,6 +64,9 @@
                 android:id="@+id/button_buonBan"
                 android:layout_below="@+id/button_nangCao"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -61,6 +75,9 @@
                 android:text="Phương trình"
                 android:textSize="20sp"
                 android:layout_below="@+id/button_buonBan"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -69,6 +86,9 @@
                 android:id="@+id/button_ptMotAn"
                 android:layout_below="@+id/textView_pt"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -77,6 +97,9 @@
                 android:id="@+id/button_hePt"
                 android:layout_below="@+id/button_ptMotAn"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -85,6 +108,8 @@
                 android:text="Hình học"
                 android:textSize="@dimen/drawertextviewtextsize"
                 android:layout_below="@+id/button_hePt"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="true"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -93,6 +118,9 @@
                 android:id="@+id/button_hinhKhoi"
                 android:layout_below="@+id/textView_hinhHoc"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -101,6 +129,9 @@
                 android:id="@+id/button_hinhPhang"
                 android:layout_below="@+id/button_hinhKhoi"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -109,6 +140,8 @@
                 android:text="Chuyển đổi"
                 android:textSize="@dimen/drawertextviewtextsize"
                 android:layout_below="@+id/button_hinhPhang"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="true"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -117,6 +150,9 @@
                 android:id="@+id/button_chuyenDoiDonVi"
                 android:layout_below="@+id/textView_chuyenDoi"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -125,6 +161,9 @@
                 android:id="@+id/button_chuyenDoiCoSo"
                 android:layout_below="@+id/button_chuyenDoiDonVi"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -133,6 +172,8 @@
                 android:text="Vector"
                 android:textSize="@dimen/drawertextviewtextsize"
                 android:layout_below="@+id/button_chuyenDoiCoSo"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="true"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -141,6 +182,9 @@
                 android:id="@+id/button_tinhVector"
                 android:layout_below="@+id/textView_vector"
                 android:background="@drawable/drawerbuttonboder"
+                android:textColor="@color/drawerbuttontextcolor"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
                 />
         </RelativeLayout>
     </ScrollView>
