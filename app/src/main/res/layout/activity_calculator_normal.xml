@@ -16,7 +16,7 @@
         tools:context=".activities.BasicCalculator"
         android:id="@+id/drawer_layout"
         >
-
+        <include layout="@layout/layout_calculator_normal"/>
         <include layout="@layout/include_nav_drawer"/>
 
     </android.support.v4.widget.DrawerLayout>

@@ -48,7 +48,7 @@ public abstract class BaseActivity extends ActionBarActivity{
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(BaseActivity.this, MainActivity.class));
+                startActivity(new Intent(BaseActivity.this, BasicCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
             }
@@ -58,6 +58,15 @@ public abstract class BaseActivity extends ActionBarActivity{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(BaseActivity.this, NormalCalculator.class));
+                finish();
+                drawerLayout.closeDrawer(Gravity.START);
+            }
+        });
+        findViewById(R.id.button_nangCao).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BaseActivity.this, AdvancedCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
             }
