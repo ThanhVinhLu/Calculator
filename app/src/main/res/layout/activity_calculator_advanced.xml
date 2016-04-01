@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.BasicCalculator"
+        tools:context=".activities.AdvancedCalculator"
         android:id="@+id/drawer_layout"
         >
         <include layout="@layout/layout_calculator_advanced"/>

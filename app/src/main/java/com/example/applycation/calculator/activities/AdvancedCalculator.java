@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.applycation.calculator.R;
 
-public class AdvancedCalculator extends AppCompatActivity {
+public class AdvancedCalculator extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

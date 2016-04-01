@@ -47,7 +47,7 @@ public abstract class BaseActivity extends ActionBarActivity{
         findViewById(R.id.button_coBan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                starColorAnimaton(v,0xFFFFFFFF);
                 startActivity(new Intent(BaseActivity.this, BasicCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
@@ -57,6 +57,7 @@ public abstract class BaseActivity extends ActionBarActivity{
 
             @Override
             public void onClick(View v) {
+                starColorAnimaton(v,0xFFFFFFFF);
                 startActivity(new Intent(BaseActivity.this, NormalCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
@@ -66,6 +67,7 @@ public abstract class BaseActivity extends ActionBarActivity{
 
             @Override
             public void onClick(View v) {
+                starColorAnimaton(v,0xFFFFFFFF);
                 startActivity(new Intent(BaseActivity.this, AdvancedCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);

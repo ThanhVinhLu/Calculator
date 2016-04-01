@@ -3,8 +3,8 @@
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:theme="@style/AppTheme.NoActionBar"
+    android:theme="@style/AppTheme"
     android:id="@+id/include_toolbar"
+    android:background="#045efa"
     >
-
 </android.support.v7.widget.Toolbar>
