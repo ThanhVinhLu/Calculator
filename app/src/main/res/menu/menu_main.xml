@@ -2,10 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
+    tools:context=".activities.BaseActivity"
     >
 
-    <group android:id="@+id/drawer_layout">
+    <group android:id="@+id/drawer_layout"
+        android:onClick="showPopUp"
+        >
         <item
             android:id="@+id/action_setting"
             android:title="Setting"

@@ -13,17 +13,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.v7.widget.Toolbar;
+import android.widget.PopupMenu;
 
 import com.example.applycation.calculator.R;
+import android.widget.PopupMenu.OnMenuItemClickListener;
+import android.widget.Toast;
 
 
 /**
  * Created by PC on 3/27/2016.
  */
-public abstract class BaseActivity extends ActionBarActivity{
+public abstract class BaseActivity extends ActionBarActivity implements OnMenuItemClickListener{
 
 
     private DrawerLayout drawerLayout;
@@ -90,7 +94,7 @@ public abstract class BaseActivity extends ActionBarActivity{
 
             @Override
             public void onDrawerClosed(View view) {
-                shouldInvalidateOptionMenu=true;
+                shouldInvalidateOptionMenu = true;
             }
 
             @Override
@@ -121,10 +125,24 @@ public abstract class BaseActivity extends ActionBarActivity{
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_setting) {
-            return true;
+        switch (id){
+            case R.id.action_setting:
+                Toast.makeText(getBaseContext(),"Setting",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_help:
+                Toast.makeText(getBaseContext(),"Help",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_feedBack:
+                Toast.makeText(getBaseContext(),"Feed back",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_history:
+                Toast.makeText(getBaseContext(),"History",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_aboutUs:
+                Toast.makeText(getBaseContext(),"About us",Toast.LENGTH_SHORT).show();
+                break;
+            default: break;
         }
-
         return super.onOptionsItemSelected(item);
     }
     public void starColorAnimaton(View v,int color){

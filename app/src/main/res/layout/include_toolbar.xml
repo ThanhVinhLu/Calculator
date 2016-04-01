@@ -5,6 +5,6 @@
     android:layout_height="wrap_content"
     android:theme="@style/AppTheme"
     android:id="@+id/include_toolbar"
-    android:background="#045efa"
+    android:background="@color/colorPrimary"
     >
 </android.support.v7.widget.Toolbar>

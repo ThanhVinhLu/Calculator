@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -248,5 +249,8 @@ public class NormalCalculator extends BaseActivity implements View.OnClickListen
         isInputAbletoNewExpression=true;
         String lastChar = expressionString.charAt(expressionString.length()-1)+"";
         text_smallResult.setText(Check.toViewString(expressionString));
+    }
+    public boolean onMenuItemClick(MenuItem item) {
+        return false;
     }
 }
