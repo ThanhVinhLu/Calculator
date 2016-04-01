@@ -4,10 +4,10 @@
 
 
     <RelativeLayout
+        android:id="@+id/layoutPT"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
+        android:layout_above="@+id/resultlayout">
         <EditText
             android:layout_width="60dp"
             android:layout_height="wrap_content"
@@ -43,9 +43,15 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Day la bang pt bac 1"
-            android:id="@+id/text_test"
+            android:id="@+id/text_ptbac1"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="80dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:id="@+id/button_action_result"
+            android:text="ket qua"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -54,14 +60,15 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_above="@+id/table"
-        >
-        <ScrollView
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:background="#ccffff" >
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:id="@+id/scrollView"
-            android:layout_gravity="center"
-            android:background="#ccffff"/>
+            android:text="chim ne"
+            android:id="@+id/text_Result" />
     </LinearLayout>
     <TableLayout
         android:id="@+id/table"
@@ -75,21 +82,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7"
-                android:id="@+id/but7"
+                android:id="@+id/button_7"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8"
-                android:id="@+id/but8"
+                android:id="@+id/button_8"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9"
-                android:id="@+id/but9"
+                android:id="@+id/button_9"
                 android:textAllCaps="false" />
         </TableRow>
         <TableRow>
@@ -98,21 +105,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"
-                android:id="@+id/but4"
+                android:id="@+id/button_4"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
-                android:id="@+id/but5"
+                android:id="@+id/button_5"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6"
-                android:id="@+id/but6"
+                android:id="@+id/button_6"
                 android:textAllCaps="false" />
         </TableRow>
         <TableRow>
@@ -121,21 +128,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:id="@+id/but1"
+                android:id="@+id/button_1"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2"
-                android:id="@+id/but2"
+                android:id="@+id/button_2"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
-                android:id="@+id/but3"
+                android:id="@+id/button_3"
                 android:textAllCaps="false" />
         </TableRow>
         <TableRow>
@@ -143,15 +150,15 @@
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/but0"
+                android:text="@string/button_numpad_0"
+                android:id="@+id/button_0"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="."
-                android:id="@+id/butdot"
+                android:id="@+id/button_dot"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
