@@ -5,6 +5,7 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.example.applycation.calculator.R;
 import com.example.applycation.calculator.calculatorhandler.Check;
 import com.example.applycation.calculator.calculatorhandler.Expression;
+import com.vstechlab.easyfonts.EasyFonts;
 
 import java.math.BigDecimal;
 
@@ -41,7 +43,6 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator_basic);
-
         attachIdToView();
         attachOnClickListener();
 
@@ -53,10 +54,13 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
     }
     //gan View vao cac doi tuong
     public void attachIdToView(){
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/DejaVuSans.ttf");
 
         //text
         text_Result = (TextView)findViewById(R.id.text_Result);
+        //text_Result.setTypeface(EasyFonts.freedom(this));
         text_smallResult = (TextView)findViewById(R.id.text_SmallResult);
+        //text_Result.setTypeface(EasyFonts.freedom(this));
 
         //numpad
         numpad = new Button[11];
@@ -71,6 +75,8 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
         numpad[8] = (Button)findViewById(R.id.button_numpad_8);
         numpad[9] = (Button)findViewById(R.id.button_numpad_9);
         numpad[10] = (Button)findViewById(R.id.button_numpad_dot);
+        for(Button num:numpad)
+                num.setTypeface(custom_font);
 
         //math
         math_Plus = (Button)findViewById(R.id.button_Math_plus);
@@ -84,7 +90,9 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
         action_CE = (Button)findViewById(R.id.button_action_CE);
         action_C = (Button)findViewById(R.id.button_action_C);
         action_Back = (Button)findViewById(R.id.button_action_back);
-
+        //action_C.setTypeface(custom_font);
+        //action_CE.setTypeface(custom_font);
+        action_Back.setTypeface(custom_font);
 
 
     }
