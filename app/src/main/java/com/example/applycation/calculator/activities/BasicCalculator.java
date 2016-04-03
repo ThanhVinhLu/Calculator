@@ -77,10 +77,6 @@ public class BasicCalculator extends BaseActivity implements View.OnClickListene
         math_Minus = (Button)findViewById(R.id.button_Math_minus);
         math_Multi = (Button)findViewById(R.id.button_Math_multiply);
         math_Divide = (Button)findViewById(R.id.button_Math_divide);
-        math_Mod = (Button)findViewById(R.id.button_Math_mod);
-        math_sqrt = (Button)findViewById(R.id.button_Math_SQRT);
-        math_mu2 = (Button)findViewById(R.id.button_Math_pow2);
-        math_1chiaX = (Button)findViewById(R.id.button_Math_1phanX);
         math_DaoDau = (Button)findViewById(R.id.button_Math_DaoDau);
 
         //action
@@ -105,10 +101,6 @@ public class BasicCalculator extends BaseActivity implements View.OnClickListene
         math_Minus.setOnClickListener(this);
         math_Multi.setOnClickListener(this);
         math_Divide.setOnClickListener(this);
-        math_Mod.setOnClickListener(this);
-        math_sqrt.setOnClickListener(this);
-        math_mu2.setOnClickListener(this);
-        math_1chiaX.setOnClickListener(this);
         math_DaoDau.setOnClickListener(this);
 
         //action
@@ -186,18 +178,6 @@ public class BasicCalculator extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.button_Math_multiply:
                 expressionString+="*";
-                break;
-            case R.id.button_Math_divide:
-                expressionString+="/";
-                break;
-            case R.id.button_Math_mod:
-                expressionString+="%";
-                break;
-            case R.id.button_Math_pow2:
-                expressionString+="^2";
-                break;
-            case R.id.button_Math_1phanX:
-                expressionString+="1/";
                 break;
             case R.id.button_Math_SQRT:
                 expressionString+="sqrt(";
