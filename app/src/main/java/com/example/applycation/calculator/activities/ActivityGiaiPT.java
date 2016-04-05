@@ -21,10 +21,11 @@ public class ActivityGiaiPT extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giai_phuong_trinh);
-
         attachID();
         attachView();
         attachListener();
+
+
 
     }
     public void attachID(){
@@ -33,7 +34,7 @@ public class ActivityGiaiPT extends AppCompatActivity {
     }
 
     public void attachView(){
-        view_pager.setAdapter(new CustomAdapter(getSupportFragmentManager(),getApplicationContext()));
+        view_pager.setAdapter(new CustomAdapter(getSupportFragmentManager(), ActivityGiaiPT.this));
         tab_layout.setupWithViewPager(view_pager);
     }
     public void attachListener(){
@@ -45,13 +46,11 @@ public class ActivityGiaiPT extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                view_pager.setCurrentItem(tab.getPosition());
 
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                view_pager.setCurrentItem(tab.getPosition());
 
             }
         });

@@ -31,27 +31,15 @@
             android:ems="10"
             android:id="@+id/text_b"/>
 
-        \<TextView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="= 0"
             android:layout_toRightOf="@id/text_b"
             android:id="@+id/text_equal"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Day la bang pt bac 1"
-            android:id="@+id/text_ptbac1"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="80dp"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:id="@+id/button_action_result"
-            android:text="ket qua"/>
+
+
     </RelativeLayout>
 
     <LinearLayout
@@ -59,7 +47,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_above="@+id/table"
+        android:layout_above="@+id/table_numpad"
         android:layout_margin="20dp"
         android:layout_gravity="center"
         android:background="#ccffff" >
@@ -71,31 +59,39 @@
             android:id="@+id/text_Result" />
     </LinearLayout>
     <TableLayout
-        android:id="@+id/table"
+        android:id="@+id/table_numpad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
         <TableRow>
             <Button
-                android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7"
-                android:id="@+id/button_7"
-                android:textAllCaps="false" />
+                android:layout_alignParentBottom="true"
+                android:id="@+id/button_action_result"
+                android:text="@string/button_action_result"/>
+        </TableRow>
+        <TableRow>
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8"
+                android:id="@+id/button_7"
+                android:textAllCaps="false"
+                android:text="@string/button_numpad_7" />
+            <Button
+                android:layout_weight="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_numpad_8"
                 android:id="@+id/button_8"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9"
+                android:text="@string/button_numpad_9"
                 android:id="@+id/button_9"
                 android:textAllCaps="false" />
         </TableRow>
@@ -104,21 +100,21 @@
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
+                android:text="@string/button_numpad_4"
                 android:id="@+id/button_4"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
+                android:text="@string/button_numpad_5"
                 android:id="@+id/button_5"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6"
+                android:text="@string/button_numpad_6"
                 android:id="@+id/button_6"
                 android:textAllCaps="false" />
         </TableRow>
@@ -127,21 +123,21 @@
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
+                android:text="@string/button_numpad_1"
                 android:id="@+id/button_1"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
+                android:text="@string/button_numpad_2"
                 android:id="@+id/button_2"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"
+                android:text="@string/button_numpad_3"
                 android:id="@+id/button_3"
                 android:textAllCaps="false" />
         </TableRow>
@@ -157,15 +153,15 @@
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="."
+                android:text="@string/button_numpad_Dot"
                 android:id="@+id/button_dot"
                 android:textAllCaps="false" />
             <Button
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/butngang"
+                android:text="@string/button_numpad_Dot"
+                android:id="@+id/button_minus"
                 android:textAllCaps="false" />
         </TableRow>
 

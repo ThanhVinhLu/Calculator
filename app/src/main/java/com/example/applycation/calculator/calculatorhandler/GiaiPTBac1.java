@@ -26,9 +26,9 @@ public class GiaiPTBac1 {
     }
 
     public String solve(){
-        if(a == 0 || b != 0)  s = "Phuong trinh vo nghiem!";
-        if(a == 0 || b == 0)	s = "Phuong trinh co vo so nghiem!";
-        else	s = "Phuong trinh co nghiem la: " + -b/a;
+        if(a == 0 || b != 0)  s = "Phương trình vô nghiệm!";
+        if(a == 0 || b == 0)	s = "Phương trình vô số nghiệm!";
+        else	s = "Phương trình có một nghiệm: x = " + -b/a;
         return s;
     }
 

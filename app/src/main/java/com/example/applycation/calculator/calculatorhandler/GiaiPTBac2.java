@@ -21,10 +21,10 @@ public class GiaiPTBac2 extends GiaiPTBac1{
         if(a == 0)	super.solve();
         else{
             double delta = b*b - 4*a*c;
-            if(delta < 0) s = "Phuong trinh vo nghi?m!";
-            if(delta == 0) s = "Phuong trinh co 1 nghiem: " + -b/2/a;
-            else s = "Phuong trinh co 2 nghiem: x1 = " +
-                    (-b-Math.sqrt(delta))/2/a + "\tx2 = " +
+            if(delta < 0) s = "Phương trình vô nghiệm!";
+            if(delta == 0) s = "Phương trình có 1 nghiệm: x = " + -b/2/a;
+            else s = "Phương trình có 2 nghiệm: \n\tx1 = " +
+                    (-b-Math.sqrt(delta))/2/a + "\n\tx2 = " +
                     (-b+Math.sqrt(delta))/2/a;
         }
         return s;
