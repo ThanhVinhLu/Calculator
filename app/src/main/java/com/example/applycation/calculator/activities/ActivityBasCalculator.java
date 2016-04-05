@@ -84,10 +84,11 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
         math_Multi = (Button)findViewById(R.id.button_Math_multiply);
         math_Divide = (Button)findViewById(R.id.button_Math_divide);
         math_DaoDau = (Button)findViewById(R.id.button_Math_DaoDau);
+        math_Mod = (Button)findViewById(R.id.button_Math_mod);
 
         //action
         action_Equal = (Button)findViewById(R.id.button_action_equal);
-        action_CE = (Button)findViewById(R.id.button_action_CE);
+        //action_CE = (Button)findViewById(R.id.button_action_CE);
         action_C = (Button)findViewById(R.id.button_action_C);
         action_Back = (Button)findViewById(R.id.button_action_back);
         //action_C.setTypeface(custom_font);
@@ -109,11 +110,12 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
         math_Minus.setOnClickListener(this);
         math_Multi.setOnClickListener(this);
         math_Divide.setOnClickListener(this);
+        math_Mod.setOnClickListener(this);
         math_DaoDau.setOnClickListener(this);
 
         //action
         action_Equal.setOnClickListener(this);
-        action_CE.setOnClickListener(this);
+        //action_CE.setOnClickListener(this);
         action_C.setOnClickListener(this);
         action_Back.setOnClickListener(this);
 
@@ -177,6 +179,9 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
                     expressionString=expressionString.substring(0,expressionString.lastIndexOf("sqrt"));
                 else
                     expressionString=expressionString.substring(0,expressionString.length()-1);
+                break;
+            case R.id.button_Math_mod:
+                expressionString+="%";
                 break;
             case R.id.button_Math_plus:
                 expressionString+="+";

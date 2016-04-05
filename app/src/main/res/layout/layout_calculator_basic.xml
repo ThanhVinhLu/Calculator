@@ -58,19 +58,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAllCaps="false"
-                android:text="@string/button_action_CE"
-                android:id="@+id/button_action_CE"
-                android:background="@drawable/boder"
-                android:textSize="@dimen/basicbuttontextsize" />
-            <Button
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAllCaps="false"
                 android:text="@string/button_action_C"
                 android:id="@+id/button_action_C"
                 android:background="@drawable/boder"
-                android:textSize="@dimen/basicbuttontextsize" />
+                android:textSize="@dimen/basicbuttonCLEARtextsize" />
             <Button
                 android:layout_weight="1"
                 android:layout_width="match_parent"
@@ -78,6 +69,15 @@
                 android:textAllCaps="false"
                 android:text="@string/button_action_BACK"
                 android:id="@+id/button_action_back"
+                android:background="@drawable/boder"
+                android:textSize="@dimen/basicbuttonDeletetextsize" />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAllCaps="false"
+                android:text="@string/button_math_mod"
+                android:id="@+id/button_Math_mod"
                 android:background="@drawable/boder"
                 android:textSize="@dimen/basicbuttontextsize" />
             <Button
