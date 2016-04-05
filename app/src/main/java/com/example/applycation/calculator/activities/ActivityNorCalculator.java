@@ -152,7 +152,7 @@ public class ActivityNorCalculator extends MainMenuActivity implements View.OnCl
                 text_Result.setText(Check.scaleValue(ans,6));
                 isInputAbletoNewExpression = false;
             }catch (Exception ex){
-                expressionString="";
+                expressionString="0";
                 text_Result.setText("LỖI");
             }
             return;
@@ -175,7 +175,9 @@ public class ActivityNorCalculator extends MainMenuActivity implements View.OnCl
                 text_Result.setText("");
                 break;
             case R.id.button_action_back:
-                if (expressionString.length()>=5&&expressionString.substring(expressionString.length() - 5).contains("sqrt"))
+                if (expressionString.length()>=3&&expressionString.substring(expressionString.length() - 3).contains("Ans"))
+                    expressionString = expressionString.substring(0, expressionString.lastIndexOf("Ans"));
+                else if (expressionString.length()>=5&&expressionString.substring(expressionString.length() - 5).contains("sqrt"))
                     expressionString = expressionString.substring(0, expressionString.lastIndexOf("sqrt"));
                 else if (expressionString.length()>=4&&expressionString.substring(expressionString.length() - 4).contains("sin"))
                     expressionString = expressionString.substring(0, expressionString.lastIndexOf("sin"));
