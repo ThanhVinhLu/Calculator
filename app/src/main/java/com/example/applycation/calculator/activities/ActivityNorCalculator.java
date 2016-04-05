@@ -4,6 +4,7 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,13 +24,12 @@ public class ActivityNorCalculator extends MainMenuActivity implements View.OnCl
     TextView text_Result,text_smallResult;
 
     Button numpad[];
-    Button numpad_ANS;
 
     Button math_Plus,math_Minus,math_Multi,math_Divide;
 
-    Button action_Equal,action_CE,action_C, action_Back,action_shift;
+    Button action_Equal,action_C, action_Back;
 
-    Button math_Can3,math_Can2,math_Mu,math_Mu2,math_Mu3,math_1phanX,math_AchiaB,math_phanTram;
+    Button math_Can2,math_Mu,math_Mu2,math_1phanX,math_phanTram;
 
     private boolean isInputAbletoNewExpression;
     @Override
@@ -48,12 +48,11 @@ public class ActivityNorCalculator extends MainMenuActivity implements View.OnCl
         text_smallResult.setText(expressionString);
     }
     public void attachIdToView(){
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/DejaVuSans.ttf");
 
         //text
         text_Result = (TextView)findViewById(R.id.text_Result);
         text_smallResult = (TextView)findViewById(R.id.text_SmallResult);
-
-        //numpad_ANS = (Button) findViewById(R.id.button_numpad_ans);
 
         //numpad
 
@@ -81,6 +80,9 @@ public class ActivityNorCalculator extends MainMenuActivity implements View.OnCl
 
         numpad[17] = (Button) findViewById(R.id.button_numpad_ans);
 
+        for(Button num:numpad){
+            num.setTypeface(custom_font);
+        }
 
         //math
         math_Plus = (Button) findViewById(R.id.button_Math_plus);
@@ -88,50 +90,38 @@ public class ActivityNorCalculator extends MainMenuActivity implements View.OnCl
         math_Multi = (Button) findViewById(R.id.button_Math_multiply);
         math_Divide = (Button) findViewById(R.id.button_Math_divide);
         math_Can2 = (Button)findViewById(R.id.button_Math_can);
-        math_Can3 = (Button)findViewById(R.id.button_Math_can3);
         math_Mu = (Button)findViewById(R.id.button_Math_mu);
         math_Mu2 = (Button)findViewById(R.id.button_Math_mu2);
-        math_Mu3 = (Button)findViewById(R.id.button_Math_mu3);
         math_1phanX = (Button)findViewById(R.id.button_Math_divideX);
-        math_AchiaB=(Button)findViewById(R.id.button_Math_phanso);
         math_phanTram = (Button) findViewById(R.id.button_Math_phanTram);
-
+        math_Mu.setTypeface(custom_font);
+        math_Mu2.setTypeface(custom_font);
+        math_Can2.setTypeface(custom_font);
 
         //action
         action_Equal = (Button)findViewById(R.id.button_action_equal);
-        action_CE = (Button)findViewById(R.id.button_action_CE);
         action_C = (Button)findViewById(R.id.button_action_C);
         action_Back = (Button)findViewById(R.id.button_action_back);
-        action_shift = (Button)findViewById(R.id.button_action_shift);
+        action_Back.setTypeface(custom_font);
 
     }
     public void attachOnClickListener(){
         for(Button num:numpad)
             num.setOnClickListener(this);
-        /*numpad_sin.setOnClickListener(this);
-        numpad_cos.setOnClickListener(this);
-        numpad_tan.setOnClickListener(this);
-        numpad_cot.setOnClickListener(this);*/
-        //numpad_ANS.setOnClickListener(this);
 
         math_Plus.setOnClickListener(this);
         math_Minus.setOnClickListener(this);
         math_Multi.setOnClickListener(this);
         math_Divide.setOnClickListener(this);
         math_Can2.setOnClickListener(this);
-        math_Can3.setOnClickListener(this);
         math_Mu.setOnClickListener(this);
         math_Mu2.setOnClickListener(this);
-        math_Mu3.setOnClickListener(this);
         math_1phanX.setOnClickListener(this);
-        math_AchiaB.setOnClickListener(this);
         math_phanTram.setOnClickListener(this);
 
         action_Equal.setOnClickListener(this);
-        action_CE.setOnClickListener(this);
         action_C.setOnClickListener(this);
         action_Back.setOnClickListener(this);
-        action_shift.setOnClickListener(this);
 
     }
 
@@ -177,22 +167,12 @@ public class ActivityNorCalculator extends MainMenuActivity implements View.OnCl
                     expressionString+="(";
             }
         }
-
         expressionString=expressionString.replace("cot","1/tan");
 
         switch (v.getId()) {
             case R.id.button_action_C:
                 expressionString = "";
                 text_Result.setText("");
-                break;
-            case R.id.button_action_CE:
-                int dem = 1;
-                for (int i = 0; i < expressionString.length(); i++) {
-                    if (Check.isNumber(expressionString.substring(expressionString.length() - dem)))
-                        dem++;
-                    else break;
-                }
-                expressionString = expressionString.substring(0, expressionString.length() + 1 - dem);
                 break;
             case R.id.button_action_back:
                 if (expressionString.length()>=5&&expressionString.substring(expressionString.length() - 5).contains("sqrt"))
@@ -227,26 +207,19 @@ public class ActivityNorCalculator extends MainMenuActivity implements View.OnCl
                 expressionString += "/100";
                 break;
             case R.id.button_Math_divideX:
+                if(expressionString.contains("Ans")&&expressionString.length()<=3)
+                    expressionString="";
                 expressionString += "1/";
-                break;
-            case R.id.button_Math_phanso:
-                expressionString += "/";
                 break;
             case R.id.button_Math_mu2:
                 expressionString += "^2";
                 break;
-            case R.id.button_Math_mu3:
-                expressionString += "^3";
-                break;
             case R.id.button_Math_can:
                 expressionString += "sqrt(";
                 break;
-
         }
-
         if(expressionString.equals(""))expressionString="0";
         isInputAbletoNewExpression=true;
-        String lastChar = expressionString.charAt(expressionString.length()-1)+"";
         text_smallResult.setText(Check.toViewString(expressionString));
     }
 }
