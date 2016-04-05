@@ -29,7 +29,7 @@
     <string name="button_math_can3">³√</string>
     <string name="button_math_pow2">x²</string>
     <string name="button_math_pow3">x³</string>
-    <string name="button_math_divideX">⅟x</string>
+    <string name="button_math_divideX">⅟ₓ</string>
     <string name="button_math_divide">÷</string>
     <string name="button_math_multiply">×</string>
     <string name="button_math_minus">−</string>
@@ -47,7 +47,7 @@
     <string name="buttun_math_canN">ⁿ√</string>
     <string name="button_math_xMuN">xⁿ</string>
     <string name="button_math_giaithua">x!</string>
-    <string name="button_math_phanso">ª/b</string>
+    <string name="button_math_phanso">a/b</string>
     <string name="button_math_log">log</string>
     <string name="button_math_ln">ln</string>
     <string name="button_Math_mu">^</string>

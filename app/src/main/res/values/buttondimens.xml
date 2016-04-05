@@ -2,7 +2,8 @@
 <resources>
     <dimen name="basicbuttontextsize">30sp</dimen>
     <dimen name="basicbutton_numbersize">40sp</dimen>
-    <dimen name="normalbuttontextsize">17sp</dimen>
+    <dimen name="normalbuttonnumpadtextsize">25sp</dimen>
+    <dimen name="normalbuttonmathtextsize">18sp</dimen>
     <dimen name="normalbuttonheight">35dp</dimen>
     <dimen name="drawertextviewtextsize">20sp</dimen>
 </resources>
