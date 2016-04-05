@@ -4,6 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="basicbuttonDeletetextsize">30sp</dimen>
-    <dimen name="basicbuttonCLEARtextsize">40sp</dimen>
+    <dimen name="basicbuttonCLEARtextsize">25sp</dimen>
 
 </resources>
