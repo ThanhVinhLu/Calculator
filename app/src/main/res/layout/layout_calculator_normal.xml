@@ -63,7 +63,7 @@
                 android:text="@string/button_math_SQRT"
                 android:background="@drawable/boder"
                 android:id="@+id/button_Math_can"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -73,7 +73,7 @@
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
                 android:id="@+id/button_Math_divideX"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -83,7 +83,7 @@
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
                 android:id="@+id/button_Math_phanTram"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
 
             <Button
@@ -93,7 +93,7 @@
                 android:text="@string/button_numpad_mongoac"
                 android:background="@drawable/boder"
                 android:id="@+id/button_numpad_mongoac"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -102,7 +102,7 @@
                 android:text="@string/button_numpad_dongngoac"
                 android:background="@drawable/boder"
                 android:id="@+id/button_numpad_dongngoac"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
         </TableRow>
         <TableRow
@@ -117,7 +117,7 @@
                 android:text="@string/button_Math_mu"
                 android:background="@drawable/boder"
                 android:id="@+id/button_Math_mu"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -127,7 +127,7 @@
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
                 android:id="@+id/button_Math_mu2"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -136,7 +136,7 @@
                 android:text="@string/button_action_C"
                 android:background="@drawable/boder"
                 android:id="@+id/button_action_C"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
 
             <Button
@@ -146,7 +146,7 @@
                 android:text="@string/button_action_BACK"
                 android:background="@drawable/boder"
                 android:id="@+id/button_action_back"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -155,7 +155,7 @@
                 android:text="@string/button_math_divide"
                 android:background="@drawable/boder"
                 android:id="@+id/button_Math_divide"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
         </TableRow>
         <TableRow
@@ -171,7 +171,7 @@
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
                 android:id="@+id/button_numpad_cot"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -181,7 +181,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_7"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -191,7 +191,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_8"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
 
             <Button
@@ -202,7 +202,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_9"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -211,7 +211,7 @@
                 android:text="@string/button_math_multiply"
                 android:background="@drawable/boder"
                 android:id="@+id/button_Math_multiply"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
         </TableRow>
         <TableRow
@@ -227,7 +227,7 @@
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
                 android:id="@+id/button_numpad_tan"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -237,7 +237,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_4"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -247,7 +247,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_5"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
 
             <Button
@@ -258,7 +258,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_6"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -267,7 +267,7 @@
                 android:text="@string/button_math_minus"
                 android:background="@drawable/boder"
                 android:id="@+id/button_Math_minus"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
         </TableRow>
         <TableRow
@@ -283,7 +283,7 @@
                 android:textAllCaps="false"
                 android:background="@drawable/boder"
                 android:id="@+id/button_numpad_cos"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -293,7 +293,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_1"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -303,7 +303,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_2"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
 
             <Button
@@ -314,7 +314,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_3"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -323,7 +323,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/button_math_plus"
                 android:id="@+id/button_Math_plus"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
         </TableRow>
         <TableRow
@@ -339,7 +339,7 @@
             android:textAllCaps="false"
             android:background="@drawable/boder"
             android:id="@+id/button_numpad_sin"
-            android:textSize="@dimen/normalbuttontextsize"
+            android:textSize="@dimen/normalbuttonmathtextsize"
             android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -349,7 +349,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_0"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -359,7 +359,7 @@
                 android:background="@drawable/boder"
                 android:textStyle="bold"
                 android:id="@+id/button_numpad_dot"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
 
             <Button
@@ -371,7 +371,7 @@
                 android:textStyle="bold"
                 android:textAllCaps="false"
                 android:id="@+id/button_numpad_ans"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonmathtextsize"
                 android:layout_margin="0.5dp" />
             <Button
                 android:layout_weight="1"
@@ -380,7 +380,7 @@
                 android:text="@string/button_action_equal"
                 android:background="@drawable/boder"
                 android:id="@+id/button_action_equal"
-                android:textSize="@dimen/normalbuttontextsize"
+                android:textSize="@dimen/normalbuttonnumpadtextsize"
                 android:layout_margin="0.5dp" />
         </TableRow>
     </TableLayout>
