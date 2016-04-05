@@ -5,6 +5,8 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 import com.example.applycation.calculator.R;
 import com.example.applycation.calculator.calculatorhandler.Check;
 import com.example.applycation.calculator.calculatorhandler.Expression;
+import com.vstechlab.easyfonts.EasyFonts;
 
 import java.math.BigDecimal;
 
@@ -40,7 +43,6 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator_basic);
-
         attachIdToView();
         attachOnClickListener();
 
@@ -52,10 +54,13 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
     }
     //gan View vao cac doi tuong
     public void attachIdToView(){
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/DejaVuSans.ttf");
 
         //text
         text_Result = (TextView)findViewById(R.id.text_Result);
+        //text_Result.setTypeface(EasyFonts.freedom(this));
         text_smallResult = (TextView)findViewById(R.id.text_SmallResult);
+        //text_Result.setTypeface(EasyFonts.freedom(this));
 
         //numpad
         numpad = new Button[11];
@@ -70,24 +75,25 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
         numpad[8] = (Button)findViewById(R.id.button_numpad_8);
         numpad[9] = (Button)findViewById(R.id.button_numpad_9);
         numpad[10] = (Button)findViewById(R.id.button_numpad_dot);
+        for(Button num:numpad)
+                num.setTypeface(custom_font);
 
         //math
         math_Plus = (Button)findViewById(R.id.button_Math_plus);
         math_Minus = (Button)findViewById(R.id.button_Math_minus);
         math_Multi = (Button)findViewById(R.id.button_Math_multiply);
         math_Divide = (Button)findViewById(R.id.button_Math_divide);
-        math_Mod = (Button)findViewById(R.id.button_Math_mod);
-        math_sqrt = (Button)findViewById(R.id.button_Math_SQRT);
-        math_mu2 = (Button)findViewById(R.id.button_Math_pow2);
-        math_1chiaX = (Button)findViewById(R.id.button_Math_1phanX);
         math_DaoDau = (Button)findViewById(R.id.button_Math_DaoDau);
+        math_Mod = (Button)findViewById(R.id.button_Math_mod);
 
         //action
         action_Equal = (Button)findViewById(R.id.button_action_equal);
-        action_CE = (Button)findViewById(R.id.button_action_CE);
+        //action_CE = (Button)findViewById(R.id.button_action_CE);
         action_C = (Button)findViewById(R.id.button_action_C);
         action_Back = (Button)findViewById(R.id.button_action_back);
-
+        //action_C.setTypeface(custom_font);
+        //action_CE.setTypeface(custom_font);
+        action_Back.setTypeface(custom_font);
 
 
     }
@@ -105,14 +111,11 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
         math_Multi.setOnClickListener(this);
         math_Divide.setOnClickListener(this);
         math_Mod.setOnClickListener(this);
-        math_sqrt.setOnClickListener(this);
-        math_mu2.setOnClickListener(this);
-        math_1chiaX.setOnClickListener(this);
         math_DaoDau.setOnClickListener(this);
 
         //action
         action_Equal.setOnClickListener(this);
-        action_CE.setOnClickListener(this);
+        //action_CE.setOnClickListener(this);
         action_C.setOnClickListener(this);
         action_Back.setOnClickListener(this);
 
@@ -177,6 +180,9 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
                 else
                     expressionString=expressionString.substring(0,expressionString.length()-1);
                 break;
+            case R.id.button_Math_mod:
+                expressionString+="%";
+                break;
             case R.id.button_Math_plus:
                 expressionString+="+";
                 break;
@@ -188,18 +194,6 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
                 break;
             case R.id.button_Math_divide:
                 expressionString+="/";
-                break;
-            case R.id.button_Math_mod:
-                expressionString+="%";
-                break;
-            case R.id.button_Math_pow2:
-                expressionString+="^2";
-                break;
-            case R.id.button_Math_1phanX:
-                expressionString+="1/";
-                break;
-            case R.id.button_Math_SQRT:
-                expressionString+="sqrt(";
                 break;
             case R.id.button_Math_DaoDau:
                 expressionString+="-";
@@ -214,20 +208,4 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
         text_smallResult.setText(Check.toViewString(expressionString));
 
     }
-
-
-/*    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings)
-            return true;
-        return super.onOptionsItemSelected(item);
-    }*/
 }

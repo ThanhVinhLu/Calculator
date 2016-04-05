@@ -6,5 +6,9 @@
     {
         "merged": "C:\\Users\\PC\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_drawer.png",
         "source": "C:\\Users\\PC\\AndroidStudioProjects\\Calculator\\app\\src\\main\\res\\mipmap-xhdpi\\ic_drawer.png"
+    },
+    {
+        "merged": "D:\\Documents\\Android_Project\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\Documents\\Android_Project\\Calculator\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]
