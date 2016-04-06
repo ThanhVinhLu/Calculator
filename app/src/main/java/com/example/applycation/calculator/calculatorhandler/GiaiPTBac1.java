@@ -5,30 +5,35 @@ package com.example.applycation.calculator.calculatorhandler;
  */
 public class GiaiPTBac1 {
 
-    protected double a, b;
+    protected double c, d;
     protected String s;
 
     public GiaiPTBac1(){
-        a = b =0;
+        c = d = 0;
     }
 
-    public double getA() {
-        return a;
+    public double getC() {
+        return c;
     }
-    public void setA(double a) {
-        this.a = a;
+
+    public void setC(double c) {
+        this.c = c;
     }
-    public double getB() {
-        return b;
+
+    public double getD() {
+        return d;
     }
-    public void setB(double b) {
-        this.b = b;
+
+    public void setD(double d) {
+        this.d = d;
     }
 
     public String solve(){
-        if(a == 0 || b != 0)  s = "Phương trình vô nghiệm!";
-        if(a == 0 || b == 0)	s = "Phương trình vô số nghiệm!";
-        else	s = "Phương trình có một nghiệm: x = " + -b/a;
+        if(c == 0) {
+            if (d != 0) s = "Phương trình vô nghiệm!";
+            else s = "Phương trình vô số nghiệm!";
+        }
+        else	s = "Phương trình có một nghiệm: x = " + -d/c;
         return s;
     }
 

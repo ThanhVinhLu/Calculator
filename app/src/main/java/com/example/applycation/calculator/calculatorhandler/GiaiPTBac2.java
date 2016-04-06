@@ -5,27 +5,27 @@ package com.example.applycation.calculator.calculatorhandler;
  */
 public class GiaiPTBac2 extends GiaiPTBac1{
 
-    protected double c;
+    protected double b;
     public GiaiPTBac2(){
         super();
-        c = 0;
+        b = 0;
     }
-    public double getC() {
-        return c;
+    public double getB() {
+        return b;
     }
-    public void setC(double c) {
-        this.c = c;
+    public void setB(double b) {
+        this.b = b;
     }
 
     public String solvePTB2(){
-        if(a == 0)	super.solve();
+        if(b == 0)	super.solve();    //bx^2 + cx + d = 0
         else{
-            double delta = b*b - 4*a*c;
+            double delta = c*c - 4*b*d;
             if(delta < 0) s = "Phương trình vô nghiệm!";
-            if(delta == 0) s = "Phương trình có 1 nghiệm: x = " + -b/2/a;
-            else s = "Phương trình có 2 nghiệm: \n\tx1 = " +
-                    (-b-Math.sqrt(delta))/2/a + "\n\tx2 = " +
-                    (-b+Math.sqrt(delta))/2/a;
+            if(delta == 0) s = "Phương trình có 1 nghiệm: x = " + -c/2/b;
+            if(delta > 0) s = "Phương trình có 2 nghiệm: \n\tx1 = " +
+                    (-c-Math.sqrt(delta))/2/b + "\n\tx2 = " +
+                    (-c+Math.sqrt(delta))/2/b;
         }
         return s;
     }

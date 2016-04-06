@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/text_a"
+            android:id="@+id/edittext_a"
             android:layout_toLeftOf="@+id/text_xMu3"/>
 
         <TextView
@@ -22,14 +22,14 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="x³ +"
-            android:layout_toLeftOf="@+id/text_b"
+            android:layout_toLeftOf="@+id/edittext_b"
             android:id="@+id/text_xMu3"/>
         <EditText
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/text_b"
+            android:id="@+id/edittext_b"
             android:layout_toLeftOf="@+id/text_xMu2"/>
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="x² +"
-            android:layout_toLeftOf="@+id/text_c"
+            android:layout_toLeftOf="@+id/edittext_c"
             android:id="@+id/text_xMu2"/>
         <EditText
             android:layout_centerHorizontal="true"
@@ -45,13 +45,13 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/text_c"/>
+            android:id="@+id/edittext_c"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="x +"
-            android:layout_toRightOf="@+id/text_c"
+            android:layout_toRightOf="@+id/edittext_c"
             android:id="@+id/text_x"/>
         <EditText
             android:layout_toRightOf="@+id/text_x"
@@ -59,13 +59,13 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/text_d"/>
+            android:id="@+id/edittext_d"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="= 0"
-            android:layout_toRightOf="@+id/text_d"
+            android:layout_toRightOf="@+id/edittext_d"
             android:id="@+id/text_equal"/>
         <TextView
             android:layout_width="wrap_content"
@@ -83,28 +83,36 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_above="@+id/table_numpad"
-        >
-        <ScrollView
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:background="#ccffff" >
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:id="@+id/scrollView"
-            android:layout_gravity="center"
-            android:background="#ccffff"/>
+            android:text="ket qua"
+            android:id="@+id/text_Result" />
     </LinearLayout>
     <TableLayout
         android:id="@+id/table_numpad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:weightSum="150">
         <TableRow>
             <Button
+                android:layout_weight="5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:id="@+id/button_action_result"
                 android:text="@string/button_action_result"/>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_width="wrap_content"
+                android:text="@string/button_action_refresh"
+                android:id="@+id/button_action_refresh" />
         </TableRow>
         <TableRow>
             <Button
@@ -194,7 +202,7 @@
                 android:layout_weight="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_numpad_Dot"
+                android:text="@string/button_math_minus"
                 android:id="@+id/button_minus"
                 android:textAllCaps="false" />
         </TableRow>
