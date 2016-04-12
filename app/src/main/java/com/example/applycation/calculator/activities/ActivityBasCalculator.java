@@ -132,7 +132,11 @@ public class ActivityBasCalculator extends MainMenuActivity implements View.OnCl
         valueAnimator.setRepeatCount(1);
         valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
         valueAnimator.start();
+
     }
+
+
+
     //cai dat Listener
     @Override
     public void onClick(View v) {

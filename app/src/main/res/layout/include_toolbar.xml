@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:theme="@style/AppTheme.NoActionBar"
     android:id="@+id/include_toolbar"
+    android:background="#497853"
     >
 
 </android.support.v7.widget.Toolbar>

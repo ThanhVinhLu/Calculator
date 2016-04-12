@@ -4,24 +4,49 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="start"
-    android:background="#212119"
+    android:background="#666666"
     >
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/relative_layout"
             >
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#CDC9A5"
+                android:id="@+id/linear"
+                >
+                <ImageView
+                    android:id="@+id/headerImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/header"
+                    android:scaleType="fitCenter"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/header_textView"
+                    android:text="Android Team Production"
+
+                    />
+            </LinearLayout>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:id="@+id/textView_toan"
                 android:text="Toán"
                 android:textSize="@dimen/drawertextviewtextsize"
                 android:textColor="@color/drawerbuttontextcolor"
                 android:textAllCaps="true"
+                android:gravity="bottom"
+                android:layout_below="@id/linear"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -57,24 +82,14 @@
                 android:gravity="center_vertical"
                 />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Buôn bán"
-                android:id="@+id/button_buonBan"
-                android:layout_below="@+id/button_nangCao"
-                android:background="@drawable/drawerbuttonboder"
-                android:textColor="@color/drawerbuttontextcolor"
-                android:textAllCaps="false"
-                android:gravity="center_vertical"
-                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_pt"
                 android:text="Phương trình"
                 android:textSize="20sp"
-                android:layout_below="@+id/button_buonBan"
+                android:layout_below="@+id/button_nangCao"
                 android:textColor="@color/drawerbuttontextcolor"
                 android:gravity="center_vertical"
                 android:textAllCaps="true"

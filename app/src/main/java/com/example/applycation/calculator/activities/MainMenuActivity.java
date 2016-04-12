@@ -43,6 +43,7 @@ public abstract class MainMenuActivity extends AppCompatActivity{
         findViewById(R.id.button_coBan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                runtime(v);
 
                 startActivity(new Intent(MainMenuActivity.this, ActivityBasCalculator.class));
                 finish();
@@ -53,6 +54,7 @@ public abstract class MainMenuActivity extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(MainMenuActivity.this, ActivityNorCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
@@ -62,12 +64,21 @@ public abstract class MainMenuActivity extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(MainMenuActivity.this, ActivityAdvCalculator.class));
                 finish();
                 drawerLayout.closeDrawer(Gravity.START);
             }
         });
+        findViewById(R.id.button_ptMotAn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                startActivity(new Intent(MainMenuActivity.this, ActivityGiaiPT.class));
+                finish();
+                drawerLayout.closeDrawer(Gravity.START);
+            }
+        });
         drawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
 
             private boolean shouldInvalidateOptionMenu;
@@ -132,6 +143,22 @@ public abstract class MainMenuActivity extends AppCompatActivity{
         valueAnimator.setRepeatCount(1);
         valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
         valueAnimator.start();
-    }
 
+    }
+    public void runtime(View v){
+        starColorAnimaton(v,Color.WHITE);
+        long futureTime= System.currentTimeMillis()+300;
+        while(System.currentTimeMillis()<futureTime){
+            synchronized (this){
+                try{
+                    wait(futureTime-System.currentTimeMillis());
+                }
+
+                catch (Exception e) {
+
+                } ;
+            }
+
+        }
+    }
 }
