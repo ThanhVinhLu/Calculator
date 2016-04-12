@@ -4,6 +4,14 @@
         "source": "D:\\Documents\\Android_Project\\Calculator\\app\\src\\main\\res\\mipmap-hdpi\\ic_drawer.png"
     },
     {
+        "merged": "D:\\AndroidStudioProject\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_drawer.png",
+        "source": "D:\\AndroidStudioProject\\Calculator\\app\\src\\main\\res\\mipmap-hdpi\\ic_drawer.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProject\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\AndroidStudioProject\\Calculator\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "D:\\Documents\\Android_Project\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "D:\\Documents\\Android_Project\\Calculator\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },

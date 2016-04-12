@@ -4,6 +4,10 @@
         "source": "D:\\Documents\\Android_Project\\Calculator\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\AndroidStudioProject\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "source": "D:\\AndroidStudioProject\\Calculator\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\PC\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\PC\\AndroidStudioProjects\\Calculator\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }

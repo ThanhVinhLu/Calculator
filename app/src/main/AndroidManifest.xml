@@ -9,7 +9,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.ActivityGiaiPT"
             android:name=".activities.ActivityBasCalculator"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
@@ -23,6 +22,9 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme"/>
         <activity android:name=".activities.ActivityAdvCalculator"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".activities.ActivityGiaiPT"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"/>
     </application>

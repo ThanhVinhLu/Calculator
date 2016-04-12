@@ -67,6 +67,14 @@ public abstract class MainMenuActivity extends AppCompatActivity{
                 drawerLayout.closeDrawer(Gravity.START);
             }
         });
+        findViewById(R.id.button_ptMotAn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainMenuActivity.this, ActivityGiaiPT.class));
+                finish();
+                drawerLayout.closeDrawer(Gravity.START);
+            }
+        });
 
         drawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
 

@@ -54,4 +54,6 @@
     <string name="button_math_ln">ln</string>
     <string name="button_Math_mu">^</string>
     <string name="title_activity_test">Test</string>
+    <string name="button_action_next"><![CDATA[->]]></string>
+    <string name="button_action_prev"><![CDATA[<-]]></string>
 </resources>

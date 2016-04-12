@@ -25,7 +25,7 @@ public class GiaiPTBac3 extends GiaiPTBac2{
             double delta = b*b - 3*a*c;
             double k = (9*a*b*c - 2*Math.pow(b, 3)- 27*a*a*d)/(2*Math.sqrt(Math.pow(Math.abs(delta),3)));
             if(delta == 0){
-                double x = (-b + Math.pow(b*b*b - 27*a*a*d , 1/3))/(3*a);
+                double x = (-b + Math.pow((b*b*b - 27*a*a*d) , 1/3))/(3*a);
                 s = "Phương trình có nghiệm kép : x = " + x;
             }
             if(delta < 0){

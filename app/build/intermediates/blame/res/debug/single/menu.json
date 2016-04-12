@@ -6,5 +6,9 @@
     {
         "merged": "C:\\Users\\PC\\AndroidStudioProjects\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "C:\\Users\\PC\\AndroidStudioProjects\\Calculator\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProject\\Calculator\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "D:\\AndroidStudioProject\\Calculator\\app\\src\\main\\res\\menu\\menu_main.xml"
     }
 ]

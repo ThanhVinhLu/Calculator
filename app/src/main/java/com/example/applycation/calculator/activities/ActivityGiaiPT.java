@@ -13,14 +13,14 @@ import com.example.applycation.calculator.R;
 import com.example.applycation.calculator.activities.Activity_TabLayout_GiaiPT.CustomAdapter;
 
 
-public class ActivityGiaiPT extends AppCompatActivity {
+public class ActivityGiaiPT extends MainMenuActivity {
 
     TabLayout tab_layout;
     ViewPager view_pager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_giai_phuong_trinh);
+        setContentView(R.layout.activity_giai_phuong_trinh_1an);
         attachID();
         attachView();
         attachListener();

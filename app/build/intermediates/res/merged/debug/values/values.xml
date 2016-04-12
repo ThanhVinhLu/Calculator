@@ -200,6 +200,8 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="basicbuttonCLEARtextsize">30sp</dimen>
+    <dimen name="basicbuttonDeletetextsize">30sp</dimen>
     <dimen name="basicbutton_numbersize">40sp</dimen>
     <dimen name="basicbuttontextsize">30sp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
@@ -242,7 +244,8 @@
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="normalbuttonheight">35dp</dimen>
-    <dimen name="normalbuttontextsize">17sp</dimen>
+    <dimen name="normalbuttonmathtextsize">18sp</dimen>
+    <dimen name="normalbuttonnumpadtextsize">25sp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
@@ -290,10 +293,14 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="button_Math_mu">^</string>
     <string name="button_action_BACK">⌫</string>
-    <string name="button_action_C">C</string>
+    <string name="button_action_C">CLR</string>
     <string name="button_action_CE">CE</string>
     <string name="button_action_ans">Ans</string>
     <string name="button_action_equal">=</string>
+    <string name="button_action_next">-></string>
+    <string name="button_action_prev">&lt;-</string>
+    <string name="button_action_refresh">Nhập lại</string>
+    <string name="button_action_result">Kết quả</string>
     <string name="button_action_shift">⌂</string>
     <string name="button_acttion_StoD">S↔D</string>
     <string name="button_math_10muN">10ⁿ</string>
@@ -305,7 +312,7 @@
     <string name="button_math_cos">cos</string>
     <string name="button_math_cot">cot</string>
     <string name="button_math_divide">÷</string>
-    <string name="button_math_divideX">⅟x</string>
+    <string name="button_math_divideX">⅟ₓ</string>
     <string name="button_math_giaithua">x!</string>
     <string name="button_math_hoanvi">HV</string>
     <string name="button_math_ln">ln</string>
@@ -313,7 +320,7 @@
     <string name="button_math_minus">−</string>
     <string name="button_math_mod">%</string>
     <string name="button_math_multiply">×</string>
-    <string name="button_math_phanso">ª/b</string>
+    <string name="button_math_phanso">a/b</string>
     <string name="button_math_plus">+</string>
     <string name="button_math_pow2">x²</string>
     <string name="button_math_pow3">x³</string>

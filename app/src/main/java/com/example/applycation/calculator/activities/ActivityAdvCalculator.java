@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.applycation.calculator.R;
 
-public class ActivityAdvCalculator extends AppCompatActivity {
+public class ActivityAdvCalculator extends MainMenuActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
